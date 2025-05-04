@@ -1,10 +1,15 @@
 import { useState, useEffect } from 'react';
+import Home from './Home';
+import Nav from './Nav';
 
 const App = () => {
 
   return (
-    <div>
-      <h1>Hello!</h1>
+    <div className='app'>
+      <Nav />
+      <div className='content'>
+        <Home />
+      </div>
     </div>
   );
 }

@@ -17,3 +17,11 @@ export const setupAndSeedTable = async (dbConn, tableName) => {
         throw err;
     }
 }
+
+export const retrieveAllEntries = async (dbConn, tableName) => {
+  const entries = await dbConn.query(
+    `SELECT id, first_name, last_name, primary_physician, registration_date FROM ${tableName}`
+  );
+  console.log('These are the retrieved entries', entries);
+  return entries.rows;
+};
