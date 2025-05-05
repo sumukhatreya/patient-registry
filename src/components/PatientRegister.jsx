@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router";
 import { usePGlite } from '@electric-sql/pglite-react';
 import { addEntry } from "../services/db";

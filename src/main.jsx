@@ -24,8 +24,6 @@ const Root = () => {
       console.log('This is pgConn', pgConn);
       // Create the patient registry and seed it with some data if no data exists.
       await setupAndSeedTable(pgConn, 'registry');
-      // const res = await pgConn.query(`SELECT * FROM registry`);
-      // console.log('This is the data', res.rows);
       setPg(pgConn);
       }
 

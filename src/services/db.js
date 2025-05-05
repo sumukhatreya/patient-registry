@@ -32,9 +32,7 @@ export const addEntry = async (
   values
 ) => {
   values.push(uuidv4());
-//   console.log(values);
   const insertQuery = `INSERT INTO ${tableName} (id, first_name, last_name, date_of_birth, email, gender, primary_physician, registration_date) VALUES ($8, $1, $2, $3, $4, $5, $6, $7);`;
-//   console.log('About to call query');
   await dbConn.query(insertQuery, values);
 };
 

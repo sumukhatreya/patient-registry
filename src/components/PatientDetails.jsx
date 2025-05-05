@@ -32,7 +32,6 @@ const PatientDetails = () => {
           gender,
           primary_physician,
         } = info[0];
-        // console.log('Heres the date', date_of_birth);
         setFirstName(first_name);
         setLastName(last_name);
         setDob(new Date(date_of_birth).toISOString().split('T')[0]);
@@ -51,7 +50,6 @@ const PatientDetails = () => {
         e.preventDefault();
         setFormLoading(true);
         if (isUpdating) {
-          // const currDate = new Date().toISOString().split('T')[0];
           const values = [
             firstName,
             lastName,
@@ -59,7 +57,6 @@ const PatientDetails = () => {
             email,
             gender,
             doctor,
-            // currDate,
           ];
           await updateEntry(db, 'registry', values, id);
         } else if (isDeleting) {

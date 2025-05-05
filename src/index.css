@@ -50,15 +50,6 @@
   padding: 0 2rem;
 }
 
-/* .entry-preview {
-  padding: 10px 16px;
-  margin: 20px 0;
-  border-bottom: 1px solid #fafafa;
-}
-.entry-preview:hover {
-  box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
-} */
-
 .entry-preview {
     padding: 10px 16px;
     margin: 20px 0;
@@ -149,7 +140,6 @@
   cursor: pointer;
 }
 
-/* Disabled state styling */
 .update-button:disabled,
 .delete-button:disabled {
   background: #cccccc;
