@@ -37,3 +37,18 @@ export const addEntry = async (
 //   console.log('About to call query');
   await dbConn.query(insertQuery, values);
 };
+
+export const retrieveEntry = async (dbConn, tableName, id) => {
+    const entry = await dbConn.query(`SELECT * FROM ${tableName} WHERE id = $1;`, [id]);
+    console.log('this is the retrieved entry', entry.rows);
+    return entry.rows;
+}
+
+export const updateEntry = async (dbConn, tableName, values, id) => {
+  values.push(id);
+  await dbConn.query(`UPDATE ${tableName} SET first_name = $1, last_name = $2, date_of_birth = $3, email = $4, gender = $5, primary_physician = $6 WHERE id = $7;`, values);
+}
+
+export const deleteEntry = async (dbConn, tableName, id) => {
+  await dbConn.query(`DELETE FROM ${tableName} WHERE id = $1`, [id]);
+}
